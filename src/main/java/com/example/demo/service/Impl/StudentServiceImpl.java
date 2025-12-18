@@ -7,7 +7,7 @@ import com.example.demo.service.StudentService;
 
 @Service
 public class StudentServiceImpl implements StudentService{
-       @Autowired StudentRepository student;
+       @Autowired StudentRepo student;
        @Override
   public StudentEntity postData(StudentEntity stu){
     return student.save(stu);
