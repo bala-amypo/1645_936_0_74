@@ -7,6 +7,8 @@ import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
+import org.springframework.web.bind.annotation.DeleteMapping;
+
 
 @RestController
 public class StudentController{
@@ -19,5 +21,10 @@ public class StudentController{
     @GetMapping("/get")
     public List<StudentEntity> getVal(){
         return ser.getAllData();
+    }
+
+    @DeleteMapping("/delete")
+    public String deleteValue(@PathVariable int id){
+        return ser.deleteData();
     }
 }
