@@ -11,76 +11,64 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Positive;
 
 @Entity
-public class ValidationEntity {
-
+public class ValidationEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotNull
-    @Size(min = 2, max = 10, message = "must be 2 to 10 characters")
+    @Size(min=2, max=10, message="must be 2 to 10 character")
     private String username;
-
     @Email(message = "Email is not valid")
     private String email;
-
-    @NotNull(message = "Password is mandatory")
-    @Size(min = 2, max = 6, message = "must be 2 to 6 characters")
+    @Size(min=2, max=6, message="must be 2 to 6 character")
+    @NotNull(message="Password is mandatory")
     private String password;
-
-    @Positive(message = "Age must be a positive number")
-    @Max(value = 30, message = "Age must not be greater than 30")
+    @Max(30)
     private int age;
 
-    // Constructors
-    public ValidationEntity() {}
-
-    public ValidationEntity(Long id, String username, String email, String password, int age) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.age = age;
+    public void setId(Long id){
+        this.id=id;
+    }
+    public void setUsername(String username){
+        this.username=username;
+    }
+    public void setEmail(String email){
+        this.email=email;
+    }
+    public void setPassword(String password){
+        this.password=password;
+    }
+    public void setAge(int age){
+        this.age=age;
     }
 
-    // Getters and Setters
-    public Long getId() {
+    public Long getId(){
         return id;
     }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getUsername() {
+    public String getUsername(){
         return username;
     }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getEmail() {
+    public String getEmail(){
         return email;
     }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
+    public String getPassword(){
         return password;
     }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getAge() {
+    public int getAge(){
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public ValidationEntity(){};
+    public ValidationEntity(long id,@NotNull @Size(min=2,max=10,message="must be 2 to 10 character") String username,
+                    @Email(message="Email is not Valid") String email,
+                    @Size(min=2,max=10,message="must be 2 to 10 character") @NotNull(message="Password should not be empty") String password,
+                    @Max(30) @Positive(message="Age must be a positive number" int age)){
+
+        this.id=id;
+        this.username=username;
+        this.email=email;
+        this.password=password;
+        this.age=age;
     }
+
 }
