@@ -39,29 +39,31 @@ public class ValidationEntity{
         this.age=age;
     }
 
-    public Integer getId(){
+    public Long getId(){
         return id;
-    }
-    public String getName(){
-        return name;
     }
     public String getUsername(){
         return username;
     }
+    public String getEmail(){
+        return email;
+    }
     public String getPassword(){
         return password;
     }
-    public Date getCreated(){
-        return created;
+    public int getAge(){
+        return age;
     }
 
-    public StudentEntity(){};
-    public StudentEntity(Integer id, String name, String username, String password, Date created){
+    public ValidationEntity(){};
+    public ValidationEntity(long id,@NotNull @Size(min=2,max=10,message="must be 2 to 10 character") String username,
+                    String email, String password, int age){
+
         this.id=id;
-        this.name=name;
         this.username=username;
+        this.email=email;
         this.password=password;
-        this.created=created;
+        this.age=age;
     }
 
 }
