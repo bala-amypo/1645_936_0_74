@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.entity.ValidationEntity;
 import com.example.demo.service.ValidationService;
-import com.example.demo.repository.ValidationtRepo;
+import com.example.demo.repository.ValidationRepo;
 // import java.util.List;
 
 @Service
