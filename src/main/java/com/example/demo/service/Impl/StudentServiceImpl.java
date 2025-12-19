@@ -24,5 +24,7 @@ public class StudentServiceImpl implements StudentService{
     return "User with "+id+" deleted successful";
   }
   @Override
-  public StudentEntity getData(int id)
+  public StudentEntity getData(int id){
+    return student.findById(id).orElse(null);
+  }
 }
