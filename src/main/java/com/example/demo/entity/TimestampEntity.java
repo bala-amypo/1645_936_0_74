@@ -29,7 +29,7 @@ public class TimestampEntity{
     private String email;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
-     LocalDateTime now= LocalDateTime().now();
+     LocalDateTime now= LocalDateTime.now();
     @PrePersist
     public void Oncreate(){
        
