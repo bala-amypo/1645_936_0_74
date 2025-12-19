@@ -25,11 +25,11 @@ public class TimestampController{
     }
 
     @DeleteMapping("/delete{id}")
-    public String deleteValue(@PathVariable int id){
+    public String deleteValue(@PathVariable Long id){
         return ser.deleteData(id);
     }
     @GetMapping("/get{id}")
-    public TimestampEntity getValue(@PathVariable int id){
+    public TimestampEntity getValue(@PathVariable Long id){
         return ser.getData(id);
     }
 }
