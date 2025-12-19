@@ -14,7 +14,6 @@ public class IdEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String email;
-    private LocalDateTime createAt;
-    private LocalDateTime updateAt;
+    private String dep;
+    private String clg;
+}

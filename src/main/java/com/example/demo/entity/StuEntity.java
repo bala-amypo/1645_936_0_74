@@ -15,7 +15,5 @@ public class TimestampEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String email;
-    private LocalDateTime createAt;
-    private LocalDateTime updateAt;
+    private String regno;
 }
