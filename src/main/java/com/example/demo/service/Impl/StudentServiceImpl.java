@@ -9,8 +9,8 @@ import java.util.List;
 
 @Service
 public class StudentServiceImpl implements StudentService{
-       @Autowired StudentRepo student;
-       @Override
+  @Autowired StudentRepo student;
+  @Override
   public StudentEntity postData(StudentEntity stu){
     return student.save(stu);
   }
