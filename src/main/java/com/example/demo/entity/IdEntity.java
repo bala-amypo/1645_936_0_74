@@ -9,7 +9,10 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
-
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class IdEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

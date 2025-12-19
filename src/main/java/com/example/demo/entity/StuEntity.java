@@ -9,8 +9,11 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
-
-public class TimestampEntity{
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class StuEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
