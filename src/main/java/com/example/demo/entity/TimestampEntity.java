@@ -29,8 +29,8 @@ public class TimestampEntity{
     private String email;
     private LocalDateTime createAt;
     private LocalDateTime updateAt;
-    @PrePersist
      LocalDateTime now= LocalDateTime().now();
+    @PrePersist
     public void Oncreate(){
        
         this.createAt=now;
