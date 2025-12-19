@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.entity.TimestampEntity;
+import com.example.demo.entity.StuEntity;
 import java.util.List;
 public interface StuService{
-    TimestampEntity postData(TimestampEntity student);
+    StuEntity postData(StuEntity student);
 }
