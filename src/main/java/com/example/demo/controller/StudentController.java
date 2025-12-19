@@ -29,7 +29,7 @@ public class StudentController{
         return ser.deleteData(id);
     }
     @GetMapping("/get{id}")
-    public StudentEntity getValue(){
+    public StudentEntity getValue(@PathVariable int id){
         return ser.getData();
     }
 }
