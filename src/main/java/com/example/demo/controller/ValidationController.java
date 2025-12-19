@@ -29,7 +29,7 @@ public class ValidationController{
     // public String deleteValue(@PathVariable int id){
     //     return ser.deleteData(id);
     // }
-    @GetMapping("/get{id}")
+    @GetMapping("/get1{id}")
     public ValidationEntity getValue(@PathVariable int id){
         return ser.getData(id);
     }
