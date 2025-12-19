@@ -18,13 +18,13 @@ public class TimestampServiceImpl implements TimestampService{
   public List<TimestampEntity>getAllData(){
     return student.findAll();
   }
-  @Override
-  public String deleteData(Long id){
-    student.deleteById(id);
-    return "User with "+id+" deleted successful";
-  }
-  @Override
-  public TimestampEntity getData(Long id){
-    return student.findById(id).orElse(null);
-  }
+//   @Override
+//   public String deleteData(Long id){
+//     student.deleteById(id);
+//     return "User with "+id+" deleted successful";
+//   }
+//   @Override
+//   public TimestampEntity getData(Long id){
+//     return student.findById(id).orElse(null);
+//   }
 }

@@ -5,6 +5,6 @@ import java.util.List;
 public interface TimestampService{
     TimestampEntity postData(TimestampEntity student); //method declaration
     List<TimestampEntity> getAllData();
-    String deleteData(Long id);
-    TimestampEntity getData(Long id);
+    // String deleteData(Long id);
+    // TimestampEntity getData(Long id);
 }

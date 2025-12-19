@@ -24,12 +24,12 @@ public class TimestampController{
         return ser.getAllData();
     }
 
-    @DeleteMapping("/delete{id}")
-    public String deleteValue(@PathVariable Long id){
-        return ser.deleteData(id);
-    }
-    @GetMapping("/get{id}")
-    public TimestampEntity getValue(@PathVariable Long id){
-        return ser.getData(id);
-    }
+    // @DeleteMapping("/delete{id}")
+    // public String deleteValue(@PathVariable Long id){
+    //     return ser.deleteData(id);
+    // }
+    // @GetMapping("/get{id}")
+    // public TimestampEntity getValue(@PathVariable Long id){
+    //     return ser.getData(id);
+    // }
 }
