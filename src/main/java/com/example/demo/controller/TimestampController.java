@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RestController
 public class TimestampController{
     @Autowired TimestampService ser;
-    @PostMapping("/post")
+    @PostMapping("/post2")
     public TimestampEntity sendData(@RequestBody TimestampEntity stu){
         return ser.postData(stu);
     }
 
-    @GetMapping("/get")
+    @GetMapping("/get2")
     public List<TimestampEntity> getVal(){
         return ser.getAllData();
     }
