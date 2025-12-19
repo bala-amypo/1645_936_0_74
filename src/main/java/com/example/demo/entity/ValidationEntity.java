@@ -59,10 +59,10 @@ public class ValidationEntity{
     }
 
     public ValidationEntity(){};
-    public ValidationEntity(long id,@NotNull @Size(min=2,max=10,message="must be 2 to 10 character") String username,
+    public ValidationEntity(Long id,@NotNull @Size(min=2,max=10,message="must be 2 to 10 character") String username,
                     @Email(message="Email is not Valid") String email,
                     @Size(min=2,max=10,message="must be 2 to 10 character") @NotNull(message="Password should not be empty") String password,
-                    @Max(30) @Positive(message="Age must be a positive number" int age)){
+                    @Max value=30 @Positive(message="Age must be a positive number" int age)){
 
         this.id=id;
         this.username=username;
