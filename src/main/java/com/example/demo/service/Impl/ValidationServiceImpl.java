@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.entity.ValidationEntity;
 import com.example.demo.service.ValidationService;
 import com.example.demo.repository.ValidationRepo;
+import com.example.demo.
 // import java.util.List;
 
 @Service
@@ -24,7 +25,7 @@ public class ValidationServiceImpl implements ValidationService{
 //     return "User with "+id+" deleted successful";
 //   }
   @Override
-  public ValidationEntity getData(int id){
+  public ValidationEntity getData(Integer id){
     return student.findById(id).orElseThrow(()->new ValidationException("Invalid id"+id));
   }
 }
