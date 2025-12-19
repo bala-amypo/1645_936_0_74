@@ -15,5 +15,4 @@ public class IdEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String dep;
-    private String clg;
 }
